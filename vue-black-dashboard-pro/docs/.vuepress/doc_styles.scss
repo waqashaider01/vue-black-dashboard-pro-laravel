@@ -1,0 +1,78 @@
+$box-shadow: 0 10px 20px -8px rgba(0,0,0,.15);
+$border-color: rgba(0,0,0,.05);
+$primary: #42b883;
+$orange: #fb6340;
+body{
+  background: white;
+}
+.ct-documentation {
+
+  .demo-block {
+    margin-top: 30px;
+    box-shadow: $box-shadow;
+    border: 1px solid $border-color;
+  }
+
+  .icon.outbound {
+    width: 12px;
+    heigth: 12px;
+  }
+
+  pre code,
+  pre code .token {
+    line-height: 22px;
+    font-size: 14px !important;
+  }
+
+  h1, h2, h3 {
+    padding-left: 0;
+    padding-top: 12px !important;
+    padding-bottom: 0 !important;
+    border-bottom: 0;
+    &:hover .header-anchor {
+      opacity: 0;
+    }
+  }
+
+  .bd-example {
+    h1, h2, h3 {
+      border: 0;
+    }
+  }
+
+}
+
+.bd-docs div[class*="language-"] .highlight-lines {
+  line-height: 1.6;
+}
+
+.bd-example .navbar {
+  height: initial;
+  border-bottom: 0;
+  margin-bottom: 15px;
+  a:hover {
+    text-decoration: none;
+    border-bottom: 0;
+  }
+}
+.bd-docs .sidebar.docs-sidebar {
+  background: #f5f6fa;
+  box-shadow: none;
+}
+
+.bd-docs .sidebar:not(.docs-sidebar) {
+  position: absolute;
+  margin: 0;
+  height: 500px;
+  z-index: 5;
+  transform: initial;
+  p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.sidebar-wrapper-docs {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+}

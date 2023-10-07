@@ -1,0 +1,111 @@
+## Vue Frontend Setup
+
+To start using this design system you will need to to install some dependencies or copy some files to your
+project.
+
+<hr>
+
+#### Steps to install
+
+1. Navigate to your Vue Black Dashboard project folder: `cd your-vue-black-dashbord-project`
+2. Install project dependencies: `npm install`
+3. Create a new .env file: `cp .env.example .env`
+4. `VUE_APP_BASE_URL` should contain the URL of your Vue Black Dashboard Project (eg. http://localhost:8080/)
+5. `VUE_APP_API_BASE_URL` should contain the URL of your Laravel JSON:API Project. (eg. http://localhost:3000/api/v1)
+6. Run `npm run dev` to start the application in a local development environment or `npm run build` to build release distributables.
+
+#### Vue Black Dashboard
+
+Vue Black Dashboard is built as Vue plugin so you can simply import it and use it.
+
+```js
+import Vue from 'vue';
+import DashboardPlugin from '@/plugins/dashboard-plugins'
+Vue.use(DashboardPlugin);
+```
+
+#### Global Components
+
+Black comes with an extensive set of custom Vue components. Some of them are globally instantiated so
+it's easier to use them across the app without importing them each time.
+
+Here's the list of global components:
+
+- **BaseButton**
+- **BaseCheckbox**
+- **BaseDropdown**
+- **Card**
+- **BaseInput**
+
+#### Local components
+
+Besides the components mentioned above, we have some extra components/plugins that are usually less used
+and bigger. In order to not affect the overall bundle size of the Black Kit, they should be imported locally.
+
+Here's the list of local components (which are not global):
+```
+    |-- AnimatedNumber.vue
+    |-- Badge.vue
+    |-- BaseAlert.vue
+    |-- BaseNav.vue
+    |-- BasePagination.vue
+    |-- BaseProgress.vue
+    |-- BaseRadio.vue
+    |-- BaseSwitch.vue
+    |-- BaseTable.vue
+    |-- CloseButton.vue
+    |-- ImageUpload.vue
+    |-- LoadingPanel.vue
+    |-- Modal.vue
+    |-- NavbarToggleButton.vue
+    |-- Slider.vue
+    |-- Breadcrumb
+    |   |-- Breadcrumb.vue
+    |   |-- BreadcrumbItem.vue
+    |   |-- RouteBreadcrumb.vue
+    |-- Cards
+    |   |-- StatsCard.vue
+    |-- Charts
+    |   |-- BarChart.js
+    |   |-- LineChart.js
+    |   |-- PieChart.js
+    |-- Collapse
+    |   |-- Collapse.vue
+    |   |-- CollapseItem.vue
+    |-- Inputs
+    |   |-- BaseCheckbox.vue
+    |   |-- BaseRadio.vue
+    |   |-- IconCheckbox.vue
+    |-- Navbar
+    |   |-- Navbar.vue
+    |   |-- NavbarToggleButton.vue
+    |-- NotificationPlugin
+    |   |-- Notification.vue
+    |   |-- Notifications.vue
+    |-- SidebarPlugin
+    |   |-- SideBar.vue
+    |   |-- SidebarItem.vue
+    |-- Tabs
+    |   |-- Tab.vue
+    |   |-- Tabs.vue
+    |-- Timeline
+    |   |-- TimeLine.vue
+    |   |-- TimeLineItem.vue
+    |-- Wizard
+    |   |-- Wizard.vue
+    |   |-- WizardTab.vue
+    |-- WorldMap
+        |-- AsyncWorldMap.vue
+        |-- WorldMap.vue
+```
+
+#### Starter template
+
+To get started faster, we provide a starter template inside the project. It's a bare bones
+layout with nav, footer and a hello world. To enable it go to **main.js** and change line 3
+
+```js{3}
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./starterRouter";
+```

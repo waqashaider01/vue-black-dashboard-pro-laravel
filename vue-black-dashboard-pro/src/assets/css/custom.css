@@ -1,0 +1,71 @@
+.avatar-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ck-editor__editable {
+  min-height: 200px;
+  width: auto;
+}
+
+.ck.ck-toolbar {
+  background: none !important;
+}
+
+.ck.ck-reset_all * {
+  color: #ba54f5 !important;
+}
+
+.ck.ck-editor__main>.ck-editor__editable {
+  background: none !important;
+}
+
+.text-login {
+  color: white;
+}
+@media (max-width: 700px) {
+  .nav-button-mini {
+    display: none;
+  }
+}
+
+.reset-page .card-login.card-white .card-header .card-title {
+  color: #ffffff;
+}
+.reset-page .card-login .card-header .card-title {
+  position: relative;
+  font-size: 4em;
+  font-weight: 900;
+  color: #222a42;
+  text-transform: lowercase;
+  margin-left: -5px;
+  z-index: 1;
+}
+
+.reset-page .card-login.card-white {
+  background: #ffffff;
+}
+.card.card-white {
+  background: #ffffff;
+}
+.reset-page .card-login {
+  border-radius: 0.4285rem;
+  padding-bottom: 0.7rem;
+}
+
+.reset-page .card-login .card-header {
+  padding: 0 0 100px;
+  overflow: hidden;
+}
+
+.reset-page .card-login .card-header img {
+  position: absolute;
+}
+
+.ck.ck-list__item .ck-button.ck-on {
+  background: #ede7fd !important;
+}
+
+.navbar.bg-vue {
+  background-color: #42b883!important;
+}
